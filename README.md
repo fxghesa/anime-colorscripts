@@ -15,6 +15,7 @@ which is inspired by
   - [Requirements](#requirements)
   - [Build](#build)
   - [Install](#install)
+  - [Uninstall](#uninstall)
   - [Usage](#usage)
     - [Running on terminal startup](#running-on-terminal-startup)
       - [On Bash and ZSH](#on-bash-and-zsh)
@@ -91,6 +92,19 @@ sudo ./install.sh
 Now the program should be installed. You can check this by using
 ```bash
 anime-colorscripts
+```
+
+## Uninstall
+
+To uninstall anime-colorscripts:
+```bash
+./uninstall.sh
+```
+*(If you installed system-wide using sudo, run `sudo ./uninstall.sh`)*.
+
+Alternatively, you can run:
+```bash
+./install.sh --uninstall
 ```
 
 ## Usage
