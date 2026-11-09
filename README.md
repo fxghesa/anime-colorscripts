@@ -98,29 +98,55 @@ You can run the program from the command line to either display a anime of your
 choice by specifying the anime name or make it display a random anime.
 ```
 Usage: anime-colorscripts [OPTION] [ANIME NAME]
-    "-h, --help, help" "Print this help." \
-    "-l, --list, list" "Print list of all anime"\
-    "-r, --random, random" "Show a random anime. This flag can optionally be
-                    followed by character / anime names (eg. miku, lumi, naruto)
-                    this will choose random anime character between all possible
-                    outcome"\
-    "-n, --name" "Select anime by name."
-    "Examples: anime-colorscripts --name 2997-hatsune-miku-wtf"
-    "          anime-colorscripts -r"
-    "          anime-colorscripts -r miku"
-    "          anime-colorscripts -r miku naruto"
-    "          anime-colorscripts -r miku naruto lumi"
+  -h, --help, help      Print this help.
+  -l, --list, list      Print list of all anime
+  -s, --small           Show small version of anime (~10 lines, default)
+  -m, --medium          Show medium version of anime (~16 lines)
+  -b, --big             Show large / big version of anime (~32 lines)
+  -H, --height <N>      Set custom height in lines (e.g. 8, 10, 12, 16)
+  -r, --random, random  Show a random anime. This flag can optionally be
+                        followed by character / anime names (eg. miku, lumi, naruto)
+                        this will choose random anime character between all possible
+                        outcomes
+  -n, --name            Select anime by name.
+Examples: anime-colorscripts --name 5235-kanna-ok
+          anime-colorscripts -r
+          anime-colorscripts -r --height 10
+          anime-colorscripts -r -m
+          anime-colorscripts -r -b
+          anime-colorscripts -r miku
+          anime-colorscripts -r -b miku naruto
 ```
 
-Example of printing out a specific anime
+Example of printing out a specific anime (default ~10 lines):
 ```
-anime-colorscripts -n 2997-hatsune-miku-wtf
+anime-colorscripts -n 5235-kanna-ok
 ```
-Example of printing out a random anime
+Example of printing with a custom height (e.g. 12 lines):
+```
+anime-colorscripts -n 5235-kanna-ok --height 12
+```
+Example of printing out a medium version (~16 lines):
+```
+anime-colorscripts -n 5235-kanna-ok -m
+```
+Example of printing out a large version (~32 lines):
+```
+anime-colorscripts -n 5235-kanna-ok -b
+```
+Example of printing out a random anime (default ~10 lines):
 ```
 anime-colorscripts -r
 ```
-Example of printing out a random anime with specific anime
+Example of printing out a medium random anime:
+```
+anime-colorscripts -r -m
+```
+Example of printing out a large random anime:
+```
+anime-colorscripts -r -b
+```
+Example of printing out a random anime with specific anime:
 ```
 anime-colorscripts -r miku
 ```
